@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/list.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+	<div >
+		<a href="http://localhost:8080/" ><button style="background-color: #ffffff; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;">Logout</a></button>
+	</div>
+
+	<div class="container">
+		<h1>Edit</h1>
+		<form action="/edit/<%= data.ID %>" method="POST">
+			<div class="form-group">
+				<label for="title">Nom</label>
+				<input 
+					type="text" 
+					class="form-control" 
+					id="title" 
+					name="name"
+					value="<%= data.name %>"
+				/>
+			</div>			
+			<label for="local">Matricule</label>
+				<input 
+					type="text" 
+					class="form-control" 
+					id="local" 
+					name="Matricule"
+					value="<%= data.Matricule %>"
+					placeholder="type the title..."
+				/>
+				
+				<label for="desc">Permis</label>
+				<input 
+					type="text" 
+					class="form-control" 
+					id="desc" 
+					name="permis",
+					value="<%= data.permis %>"
+					placeholder="type the title..."
+				/>
+				<div class="form-group">
+					<label for="title">Date de Pirmis</label>
+					<input 
+						type="date" 
+						class="form-control" 
+						id="title" 
+						name="DatePirmis"
+						value="<%= data.DatePirmis %>"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="title">Ville</label>
+					<input 
+						type="text" 
+						class="form-control" 
+						id="title" 
+						name="ville"
+						value="<%= data.ville %>"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="title">Phone</label>
+					<input 
+						type="number" 
+						class="form-control" 
+						id="title" 
+						name="Phone"
+						value="<%= data.Phone %>"
+					/>
+				</div>
+			<button type="submit" class="btn btn-info">Save</button>
+		</form >
+	</div>
+	
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
